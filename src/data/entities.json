@@ -1,0 +1,98 @@
+{
+  "units": {
+    "scv": {
+      "name": "SCV",
+      "mineralCost": 50,
+      "gasCost": 0,
+      "buildTime": 12,
+      "supplyCost": 1,
+      "prerequisites": ["command_center"],
+      "producedFrom": "command_center"
+    },
+    "marine": {
+      "name": "Marine",
+      "mineralCost": 50,
+      "gasCost": 0,
+      "buildTime": 18,
+      "supplyCost": 1,
+      "prerequisites": ["barracks"],
+      "producedFrom": "barracks"
+    }
+  },
+  "structures": {
+    "command_center": {
+      "name": "Command Center",
+      "mineralCost": 400,
+      "gasCost": 0,
+      "buildTime": 71,
+      "prerequisites": [],
+      "producedFrom": "scv"
+    },
+    "supply_depot": {
+      "name": "Supply Depot",
+      "mineralCost": 100,
+      "gasCost": 0,
+      "buildTime": 21,
+      "prerequisites": [],
+      "producedFrom": "scv"
+    },
+    "refinery": {
+      "name": "Refinery",
+      "mineralCost": 75,
+      "gasCost": 0,
+      "buildTime": 21,
+      "prerequisites": [],
+      "producedFrom": "scv"
+    },
+    "barracks": {
+      "name": "Barracks",
+      "mineralCost": 150,
+      "gasCost": 0,
+      "buildTime": 46,
+      "prerequisites": ["supply_depot"],
+      "producedFrom": "scv"
+    },
+    "engineering_bay": {
+      "name": "Engineering Bay",
+      "mineralCost": 125,
+      "gasCost": 0,
+      "buildTime": 25,
+      "prerequisites": ["command_center"],
+      "producedFrom": "scv"
+    },
+    "factory": {
+      "name": "Factory",
+      "mineralCost": 150,
+      "gasCost": 100,
+      "buildTime": 43,
+      "prerequisites": ["barracks"],
+      "producedFrom": "scv"
+    },
+    "starport": {
+      "name": "Starport",
+      "mineralCost": 150,
+      "gasCost": 100,
+      "buildTime": 36,
+      "prerequisites": ["factory"],
+      "producedFrom": "scv"
+    }
+  },
+  "upgrades": {
+    "orbital_command": {
+      "name": "Orbital Command",
+      "mineralCost": 150,
+      "gasCost": 0,
+      "buildTime": 25,
+      "prerequisites": ["barracks"],
+      "producedFrom": "command_center"
+    },
+    "planetary_fortress": {
+      "name": "Planetary Fortress",
+      "mineralCost": 150,
+      "gasCost": 150,
+      "buildTime": 36,
+      "prerequisites": ["engineering_bay"],
+      "producedFrom": "command_center"
+    }
+  }
+}
